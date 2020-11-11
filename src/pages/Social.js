@@ -1,9 +1,18 @@
 import React from "react";
 import { social } from "../assets/data";
+import { pageTransition, titleAnim } from "../animation";
+import { motion } from "framer-motion";
+import ScrollTop from "../components/ScrollTop";
 
 export default function Social() {
   return (
-    <div className="bg-teal-200 h-screen">
+    <motion.div
+      className="bg-teal-200 h-screen"
+      variants={pageTransition}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       <article className="md:w-4/5 w-11/12 mx-auto">
         <h1 className="pt-24 italic font-semibold text-teal-500 md:text-5xl text-3xl">
           Social Media
@@ -19,21 +28,24 @@ export default function Social() {
                 key={index}
                 className="justify-self-start text-3xl md:text-5xl hover:text-teal-500 transition transition-all duration-300 ease-in-out"
               >
-                <h1>
-                  <a
-                    className="flex items-center ml-4"
-                    href={url}
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    {icon} <span className="ml-4">{titel}</span>
-                  </a>
-                </h1>
+                <motion.div className="overflow-hidden">
+                  <motion.h1 variants={titleAnim}>
+                    <a
+                      className="flex items-center ml-4"
+                      href={url}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {icon} <span className="ml-4">{titel}</span>
+                    </a>
+                  </motion.h1>
+                </motion.div>
               </div>
             );
           })}
         </div>
       </article>
-    </div>
+      <ScrollTop />
+    </motion.div>
   );
 }

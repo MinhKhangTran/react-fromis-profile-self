@@ -1,13 +1,22 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { movieState } from "../assets/data";
+import { pageTransition } from "../animation";
+import { motion } from "framer-motion";
+import ScrollTop from "../components/ScrollTop";
 
 export default function SingleDetail() {
   const { id } = useParams();
   const uniquePage = [movieState.find((movie) => movie.url === id)];
   // uniquePage.map((item) => console.log(item.title));
   return (
-    <div className="bg-pink-200">
+    <motion.div
+      className="bg-pink-200"
+      variants={pageTransition}
+      initial="hidden"
+      animate="show"
+      exit="exit"
+    >
       {uniquePage.map((item, index) => {
         const { title, mainImg, secondaryImg, awards } = item;
         return (
@@ -46,6 +55,7 @@ export default function SingleDetail() {
           </div>
         );
       })}
-    </div>
+      <ScrollTop />
+    </motion.div>
   );
 }

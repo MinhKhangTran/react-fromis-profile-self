@@ -1,12 +1,20 @@
 import React from "react";
 import { aboutus } from "../assets/data";
 import { aboutPic } from "../assets/data";
+import { useScroll } from "../hook/useScroll";
+import { scrollReveal } from "../animation";
+import { motion } from "framer-motion";
 
 export default function About() {
+  const [element, controls] = useScroll();
   return (
-    <section
-      className="h-screen w-screen bg-red-200 grid place-items-center overflow-y-hidden"
+    <motion.section
+      className="h-screen w-screen bg-red-200 grid place-items-center"
       id="about"
+      variants={scrollReveal}
+      animate={controls}
+      initial="hidden"
+      ref={element}
     >
       <article className="grid md:w-2/3 w-11/12 mx-auto">
         <div className="flex md:flex-row flex-col justify-between items-center">
@@ -29,6 +37,6 @@ export default function About() {
           <img className="rounded-lg" src={aboutPic} alt="fromis9" />
         </div>
       </article>
-    </section>
+    </motion.section>
   );
 }
