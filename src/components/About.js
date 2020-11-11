@@ -5,7 +5,7 @@ import { aboutPic } from "../assets/data";
 export default function About() {
   return (
     <section
-      className="h-screen w-screen bg-red-200 grid place-items-center"
+      className="h-screen w-screen bg-red-200 grid place-items-center overflow-y-hidden"
       id="about"
     >
       <article className="grid md:w-2/3 w-11/12 mx-auto">

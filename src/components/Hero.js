@@ -18,7 +18,7 @@ export default function Hero() {
                 />
               </div>
             </StyledImage>
-            <div className="absolute" style={{ left: "10%", top: "10%" }}>
+            <div className="absolute" style={{ left: "10%", top: "15%" }}>
               <div className="overflow-hidden">
                 <h1 className="md:text-6xl text-3xl text-red-300 font-bold">
                   {text}
