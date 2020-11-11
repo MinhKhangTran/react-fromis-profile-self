@@ -46,7 +46,7 @@ export default function Hero() {
 const StyledImage = styled.div`
   .bild::before {
     content: "";
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0.7);
     position: absolute;
     width: 100vw;
     height: 100vh;
