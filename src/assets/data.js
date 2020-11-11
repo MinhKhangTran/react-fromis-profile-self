@@ -73,14 +73,14 @@ export const discography = [
   { id: "from-9", title: "From.9", img: "https://i.imgur.com/1l7TMWv.jpg" },
 ];
 
-export const MovieState = [
+export const movieState = [
   {
     title: "My Little Society",
     mainImg:
       "https://dbkpop.com/wp-content/uploads/2020/09/fromis_9_my_little_society_concept_all_group_2-1536x1064.jpg",
     secondaryImg:
       "https://kpopping.com/uploads/documents/c1/2/kpics_gallery/32,2886,29.jpeg.keep.fff.png.pagespeed.ce.8uV5FVxahP.png",
-    url: "/work/my-little-society",
+    url: "my-little-society",
     awards: [
       {
         title: "Truly A masterpiece",
@@ -103,7 +103,7 @@ export const MovieState = [
     title: "Fun Factory",
     mainImg:
       "https://dbkpop.com/wp-content/uploads/2019/06/fromis_9_fun_factory_all.jpg",
-    url: "/work/fun-factory",
+    url: "fun-factory",
     secondaryImg:
       "https://dbkpop.com/wp-content/uploads/2019/06/fromis_9_fun_mv_shooting_all.jpg",
     awards: [
@@ -127,7 +127,7 @@ export const MovieState = [
   {
     title: "From.9",
     mainImg: "https://i.imgur.com/1l7TMWv.jpg",
-    url: "/work/from-9",
+    url: "from-9",
     secondaryImg:
       "https://images-na.ssl-images-amazon.com/images/I/61c6RvwFJwL._SX522_.jpg",
     awards: [
